@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Merriweather:ital,opsz,wdth,wght@0,18..144,102.6,300..900;1,18..144,102.6,300..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playwrite+VN+Guides&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+.cart-container {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Merriweather", serif;
+}
+
+.cart-container h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #1e293b;
+  margin-bottom: 30px;
+  font-family: "Noto Serif", serif;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  margin-bottom: 12px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.cart-item p {
+  margin: 0;
+  font-size: 16px;
+  color: #334155;
+  font-family: "Merriweather", serif;
+}
+
+.cart-item strong {
+  font-size: 17px;
+  color: #1e293b;
+}
+
+.cart-container h3 {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 22px;
+  color: #0f172a;
+  font-family: "Merriweather", serif;
+}
+
+.btn-pay {
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 30px;
+  font-size: 16px;
+  background-color: #1e293b;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  font-family: "Merriweather", serif;
+}
+
+.btn-pay:hover {
+  background-color: #0f172a;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+  text-align: center;
+  min-width: 300px;
+  font-family: "Merriweather", serif;
+}
+
+.modal-content h2 {
+  margin-bottom: 16px;
+  color: #1e293b;
+  font-family: "Noto Serif", serif;
+}
+
+.modal-content p {
+  margin-bottom: 24px;
+  color: #334155;
+  font-size: 18px;
+}
+
+.cart-page-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 70vh;
+  background: #fafafa;
+  padding: 40px 0;
+  font-family: "Merriweather", serif;
+}
+
+.cart-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 32px;
+  text-align: center;
+  font-family: "Noto Serif", serif;
+}
+
+.cart-items-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.cart-items-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.cart-card-centered {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 32px 28px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+  max-width: 340px;
+  font-family: "Merriweather", serif;
+}
+
+.cart-card-img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+.cart-card-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cart-card-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #222;
+  font-family: "Noto Serif", serif;
+}
+
+.cart-card-price {
+  color: #1976d2;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.cart-card-info {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 4px;
+}
+
+.cart-card-btns {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.cart-buy-btn, .cart-remove-btn {
+  padding: 10px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+  font-family: "Merriweather", serif;
+}
+
+.cart-buy-btn {
+  background: #e53935;
+  color: #fff;
+}
+
+.cart-buy-btn:hover {
+  background: #b71c1c;
+}
+
+.cart-remove-btn {
+  background: #fff;
+  color: #e53935;
+  border: 2px solid #e53935;
+}
+
+.cart-remove-btn:hover {
+  background: #e53935;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .cart-container h2 {
+    font-size: 22px;
+  }
+
+  .cart-container h3 {
+    text-align: center;
+  }
+
+  .cart-card-centered {
+    min-width: 90vw;
+    max-width: 95vw;
+    padding: 18px 6px;
+  }
+
+  .cart-card-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cart-items-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cart-card-centered {
+    min-width: 90vw;
+    max-width: 95vw;
+    padding: 18px 6px;
+  }
+
+  .cart-card-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Optional: Code block styling */
+code, pre {
+  font-family: "Libertinus Mono", monospace;
+}

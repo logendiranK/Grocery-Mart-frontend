@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Merriweather:ital,opsz,wdth,wght@0,18..144,102.6,300..900;1,18..144,102.6,300..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playwrite+VN+Guides&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-color: #f7f7f7;
+  font-family: "Merriweather", serif;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form h2 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 25px;
+  font-family: "Noto Serif", serif;
+}
+
+.auth-form input {
+  width: 90%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #f0f4f8;
+  transition: 0.3s;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: #0c4a6e;
+  background-color: #fff;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1e293b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-form button:hover {
+  background-color: #0f172a;
+}
+
+/* Optional: Code block styling */
+code, pre {
+  font-family: "Libertinus Mono", monospace;
+}
