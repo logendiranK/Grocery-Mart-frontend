@@ -8,7 +8,6 @@ const Cart = () => {
   const userAddress = user?.address || "-";
 
   useEffect(() => {
-    // Load cart from localStorage
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     setCartItems(cart);
   }, []);

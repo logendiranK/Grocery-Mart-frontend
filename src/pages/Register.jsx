@@ -21,7 +21,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", form);
+      const res = await axios.post("https://grocery-mart-backend.onrender.com/api/auth/register", form);
       alert("Registration Successful. Please login.");
       navigate("/login");
     } catch (err) {
