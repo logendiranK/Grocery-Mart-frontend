@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <section className="home-section">
-        <h1>Welcome to GroceryMart</h1>
+        <h1>Welcome to Mart</h1>
         <p>
           Your favorite online store for fresh groceries, daily needs, and
           household essentials!

@@ -18,7 +18,7 @@ const Login = () => {
       localStorage.setItem("user", JSON.stringify(res.data.user));
       localStorage.setItem("token", res.data.token);
       alert("Login Successful");
-      navigate("/"); 
+      navigate("/");
     } catch (err) {
       alert("Invalid email or password");
     }
@@ -27,7 +27,7 @@ const Login = () => {
   return (
     <div className="log-container">
       <form onSubmit={handleLogin} className="log-form">
-         <h2>Login</h2>
+        <h2>Login</h2>
         <input type="email" name="email" placeholder="Email" value={form.email} onChange={handleChange} required />
         <input type="password" name="password" placeholder="Password" value={form.password} onChange={handleChange} required />
         <button type="submit" className="btn">Login</button>

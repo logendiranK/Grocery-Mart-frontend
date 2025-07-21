@@ -1,70 +1,69 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import "../Styles/Cart.css";
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
+
   const user = JSON.parse(localStorage.getItem("user"));
+  const userAddress = user?.address || "-";
 
   useEffect(() => {
-    fetchCart();
+    // Load cart from localStorage
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCartItems(cart);
   }, []);
 
-  const fetchCart = async () => {
-    if (!user || !user._id) return;
-    try {
-      const res = await axios.get(`http://localhost:5000/api/cart/${user._id}`);
-      const items = res.data.cartItems || [];
-      setCartItems(items);
-    } catch (err) {
-      console.error("Error fetching cart:", err.message);
-    }
+  const updateCart = (newCart) => {
+    setCartItems(newCart);
+    localStorage.setItem("cart", JSON.stringify(newCart));
   };
 
-  const handleRemove = async (itemId) => {
-    if (!user || !user._id) return;
-    try {
-      await axios.delete(`http://localhost:5000/api/cart/${user._id}/${itemId}`);
-      fetchCart();
-    } catch (err) {
-      alert("Failed to remove item");
-    }
+  const handleRemove = (itemId) => {
+    const newCart = cartItems.filter(ci => ci.item._id !== itemId);
+    updateCart(newCart);
   };
 
-  const handleBuy = (item) => {
-    alert(`Purchased: ${item.itemId?.name || "Item"}`);
-    handleRemove(item.itemId?._id);
+  const handleBuy = (cartItem) => {
+    alert(`Buying ${cartItem.item.name} for ₹${cartItem.item.price}`);
+    handleRemove(cartItem.item._id);
   };
-
-  
-  const validCartItems = cartItems.filter(item => item.itemId && item.itemId.name);
 
   return (
     <div className="cart-page-centered">
-      <h2 className="cart-title">
-        Cart ({validCartItems.length} {validCartItems.length === 1 ? "item" : "items"})
-      </h2>
+      <h2 className="cart-title">Cart ({cartItems.length} items)</h2>
       <div className="cart-items-row">
-        {validCartItems.length === 0 ? (
-          <p>Your cart is empty.</p>
+        {cartItems.length === 0 ? (
+          <p>No items in cart</p>
         ) : (
-          validCartItems.map((item, i) => (
-            <div className="cart-card-centered" key={i}>
+          cartItems.map((cartItem, i) => (
+            <div key={i} className="cart-card-centered">
               <img
-                src={item.itemId.image || "https://via.placeholder.com/180x180?text=No+Image"}
-                alt={item.itemId.name}
+                src={cartItem.item.image}
+                alt={cartItem.item.name}
                 className="cart-card-img"
               />
               <div className="cart-card-details">
-                <div className="cart-card-name">{item.itemId.name}</div>
-                <div className="cart-card-price">₹{item.itemId.price || "-"}</div>
-                <div className="cart-card-info">Category: {item.itemId.category || "-"}</div>
-                <div className="cart-card-info">Weight Options: {item.itemId.weightOptions ? item.itemId.weightOptions.join(', ') : "-"}</div>
-                <div className="cart-card-info">Address: {item.address || user?.address || "-"}</div>
-                <div className="cart-card-btns">
-                  <button className="cart-buy-btn" onClick={() => handleBuy(item)}>Buy</button>
-                  <button className="cart-remove-btn" onClick={() => handleRemove(item.itemId._id)}>Remove</button>
-                </div>
+                <div className="cart-card-name">{cartItem.item.name}</div>
+                <div className="cart-card-price">₹{cartItem.item.price}</div>
+                <div className="cart-card-info">Category: {cartItem.item.category}</div>
+                {cartItem.item.weightOptions && cartItem.item.weightOptions.length > 0 && (
+                  <div className="cart-card-info">
+                    Size: {cartItem.item.weightOptions[0]}
+                  </div>
+                )}
+                <div className="cart-card-info">Qty: {cartItem.quantity}</div>
+                <div className="cart-card-info">Address: {userAddress}</div>
+              </div>
+              <div className="cart-card-btns">
+                <button className="cart-buy-btn" onClick={() => handleBuy(cartItem)}>
+                  Buy
+                </button>
+                <button
+                  className="cart-remove-btn"
+                  onClick={() => handleRemove(cartItem.item._id)}
+                >
+                  Remove
+                </button>
               </div>
             </div>
           ))
