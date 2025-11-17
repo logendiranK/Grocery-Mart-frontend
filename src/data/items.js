@@ -11,7 +11,7 @@ const data = [
   {
     _id: '2',
     name: 'Tomatoes',
-    image: 'https://cdn.pixabay.com/photo/2016/03/05/19/02/tomatoes-1238256_960_720.jpg',
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3DRPxLp5XH4U1fUPLQwkWQn7fUd368gb2lUCx9qEKuUb5LhktbVpEcMTg_3EP_rx99pWkU_cdJ_ZETZlfswgCjwu5DhipxhHqNXYkPJ0&s=10",
     description: 'Fresh organic tomatoes.',
     category: 'Vegetables',
     weightOptions: ['500g', '1kg'],
@@ -20,7 +20,7 @@ const data = [
   {
     _id: '3',
     name: 'Milk',
-    image: 'https://cdn.pixabay.com/photo/2017/05/23/22/36/milk-2335488_960_720.jpg',
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmchxBrOoLR98R1gwbr5ZfNcY4uk-eb277Lg&s",
     description: 'Fresh cow milk.',
     category: 'Dairy',
     weightOptions: ['500ml', '1L'],
@@ -29,7 +29,7 @@ const data = [
   {
     _id: '4',
     name: 'Rice',
-    image: 'https://cdn.pixabay.com/photo/2016/04/17/19/55/rice-1338761_960_720.jpg',
+    image: 'https://5.imimg.com/data5/SELLER/Default/2024/11/466449383/CI/WP/FK/64616408/rnr-rice-1000x1000.jpg',
     description: 'Premium Basmati rice.',
     category: 'Grains',
     weightOptions: ['1kg', '5kg'],
@@ -38,7 +38,7 @@ const data = [
   {
     _id: '5',
     name: 'Potato',
-    image: 'https://cdn.pixabay.com/photo/2017/04/25/23/26/potatoes-2267031_960_720.jpg',
+    image: 'https://images.apollo247.in/pd-cms/cms/2025-05/AdobeStock_1291706602_Preview.webp?tr=q-80,f-webp,w-400,dpr-2.5,c-at_max%201000w.jpg',
     description: 'Farm fresh potatoes.',
     category: 'Vegetables',
     weightOptions: ['500g', '1kg'],
@@ -47,8 +47,7 @@ const data = [
   {
     _id: '6',
     name: 'Bread',
-    image: 'https://cdn.pixabay.com/photo/2016/03/05/22/53/bread-1238450_960_720.jpg',
-    description: 'Whole wheat bread.',
+    image: 'https://m.media-amazon.com/images/I/71dyuWp4bRL._SX679_.jpg',
     category: 'Bakery',
     weightOptions: ['1 loaf'],
     price: 40,
@@ -56,7 +55,7 @@ const data = [
   {
     _id: '7',
     name: 'Butter',
-    image: 'https://cdn.pixabay.com/photo/2016/02/19/11/53/butter-1209414_960_720.jpg',
+    image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR7a5Tz_4SK3I-03kgTqfJlXC0sJV3THtRkRxAvCWdXmLHxu-2HZkyuH5eOJezlYiCncrTMm5a5WG20UBB1GY3rUuDRWu7F0g',
     description: 'Creamy unsalted butter.',
     category: 'Dairy',
     weightOptions: ['100g', '200g'],
@@ -65,7 +64,7 @@ const data = [
   {
     _id: '8',
     name: 'Apple',
-    image: 'https://cdn.pixabay.com/photo/2016/03/05/19/02/apples-1238247_960_720.jpg',
+    image: 'https://freshindiaorganics.com/cdn/shop/files/WhatsAppImage2024-11-22at3.33.45PM_2.jpg?v=1732270364',
     description: 'Fresh red apples.',
     category: 'Fruits',
     weightOptions: ['1kg'],
@@ -74,7 +73,7 @@ const data = [
   {
     _id: '9',
     name: 'Oats',
-    image: 'https://cdn.pixabay.com/photo/2017/06/08/11/53/oats-2389984_960_720.jpg',
+    image: 'https://rukminim2.flixcart.com/image/480/480/knknc7k0/cereal-flake/m/z/t/1-oats-1-kg-pouch-quaker-original-imag28b3d8rggqwn.jpeg?q=90',
     description: 'Healthy rolled oats.',
     category: 'Grains',
     weightOptions: ['500g', '1kg'],
@@ -83,7 +82,7 @@ const data = [
   {
     _id: '10',
     name: 'Orange Juice',
-    image: 'https://cdn.pixabay.com/photo/2015/09/02/12/45/orange-918866_960_720.jpg',
+    image: 'https://m.media-amazon.com/images/I/71zHrg0MPTL.jpg',
     description: '100% pure orange juice.',
     category: 'Beverages',
     weightOptions: ['500ml', '1L'],
@@ -92,7 +91,7 @@ const data = [
   {
     _id: '11',
     name: 'Eggs',
-    image: 'https://cdn.pixabay.com/photo/2017/03/17/08/23/eggs-2157234_960_720.jpg',
+    image: 'https://www.licious.in/blog/wp-content/uploads/2022/01/eggs-1.jpg',
     description: 'Farm fresh eggs.',
     category: 'Dairy',
     weightOptions: ['6 pcs', '12 pcs'],
@@ -101,7 +100,7 @@ const data = [
   {
     _id: '12',
     name: 'Carrot',
-    image: 'https://cdn.pixabay.com/photo/2015/03/26/09/54/carrots-690674_960_720.jpg',
+    image: 'https://www.ugaoo.com/cdn/shop/files/8_209ea858-52db-476f-919d-857a374efd4c.jpg?v=1756482289&width=1000',
     description: 'Organic carrots.',
     category: 'Vegetables',
     weightOptions: ['500g', '1kg'],
@@ -110,7 +109,7 @@ const data = [
   {
     _id: '13',
     name: 'Banana',
-    image: 'https://cdn.pixabay.com/photo/2014/04/10/11/06/banana-320474_960_720.jpg',
+    image: 'https://www.jiomart.com/images/product/original/590000454/banana-robusta-1-kg-product-images-o590000454-p590000454-0-202410011654.jpg?im=Resize=(420,420)',
     description: 'Fresh ripe bananas.',
     category: 'Fruits',
     weightOptions: ['6 pcs', '12 pcs'],
@@ -119,7 +118,7 @@ const data = [
   {
     _id: '14',
     name: 'Spinach',
-    image: 'https://cdn.pixabay.com/photo/2020/06/20/23/01/spinach-5325206_960_720.jpg',
+    image: 'https://m.media-amazon.com/images/I/41WVSdCpo+L._AC_UF1000,1000_QL80_.jpg',
     description: 'Green spinach leaves.',
     category: 'Vegetables',
     weightOptions: ['250g', '500g'],
@@ -128,7 +127,7 @@ const data = [
   {
     _id: '15',
     name: 'Corn Flakes',
-    image: 'https://cdn.pixabay.com/photo/2017/08/30/07/52/cornflakes-2693243_960_720.jpg',
+    image: 'https://bagrrys.com/cdn/shop/files/1_9_7033f41b-7f0e-49e9-9a76-51fff045763c.jpg?v=1731059842g',
     description: 'Crispy corn flakes for breakfast.',
     category: 'Cereals',
     weightOptions: ['250g', '500g'],
