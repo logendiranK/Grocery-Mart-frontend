@@ -2,7 +2,7 @@ const data = [
   {
     _id: '1',
     name: 'Biscuits',
-    image: 'https://cdn.pixabay.com/photo/2014/12/15/13/40/cookies-569756_960_720.jpg',
+    image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT7dkwOKh_VYUen9tkDh8MT66SlNUKO-N0Uah1ol_KgLZs943Jpnl0OJY0pCLhJqA1uLYgFa_PDHoAJNXUS8xFZM0w-b6cmEHyGsapAZW4",
     description: 'Delicious fresh biscuits for snacks.',
     category: 'Snacks',
     weightOptions: ['6 pcs', '12 pcs'],
